@@ -24,7 +24,7 @@ class MainApp(AppInterface):
         self.frm_top.pack(side=tk.TOP)
         self.frm_bottom = tk.Frame(self.root,bg="black")
         self.frm_bottom.pack(side=tk.TOP)
-        print("Main app run")
+
         lbl = self.create_label(self.frm_top, text="Choose the application to run")
         lbl.pack()
         btn_first_app = self.create_button(self.frm_bottom, text="Simple app")

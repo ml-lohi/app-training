@@ -32,7 +32,7 @@ class SimpleApp(AppInterface):
         btn_insert.bind("<Button-1>", lambda event: entry.insert(0, "Python is cool"))
         btn_insert.pack()
         
-        btn_back = self.create_button(self.frm_right, text="Back")
+        btn_back = self.create_button(self.frm_left, text="Back")
         btn_back.bind("<Button-1>", lambda event: self.back())
         btn_back.pack()
 
@@ -40,6 +40,11 @@ class SimpleApp(AppInterface):
         self.destroy()      
 
 if "__main__" == __name__:
-    gui = tk.Tk()
-    app = SimpleApp(gui)
+    root = tk.Tk()
+    root.title("Main app")
+    root.geometry("400x400")
+    root.configure(bg="black")
+    app = SimpleApp(root)
     app.run()
+    root.mainloop()
+    
